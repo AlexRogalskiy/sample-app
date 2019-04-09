@@ -26,7 +26,7 @@ public class PersonsController {
     }
 
     @Get("/{id}")
-    public Person findById(Long id) {
+    public Person findById(Integer id) {
         LOGGER.info("Person find: id={}", id);
         return repository.findById(id);
     }

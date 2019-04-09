@@ -1,10 +1,11 @@
 package pl.piomin.services.sample;
 
+import javax.inject.Singleton;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-
+@Singleton
 public class PersonRepository {
 
     List<Person> persons = new ArrayList<>();
@@ -15,7 +16,7 @@ public class PersonRepository {
         return person;
     }
 
-    public Person findById(Long id) {
+    public Person findById(Integer id) {
         Optional<Person> person = persons.stream().filter(a -> a.getId().equals(id)).findFirst();
         if (person.isPresent())
             return person.get();
