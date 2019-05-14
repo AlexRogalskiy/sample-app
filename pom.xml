@@ -192,4 +192,14 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+	
+	   <repositories>
+        <repository>
+            <id>artifactory</id>
+            <url>http://10.10.99.86:8081/artifactory/remote-repos</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
